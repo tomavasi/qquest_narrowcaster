@@ -59,3 +59,14 @@
     margin: 0;
     font-size: 1.2rem;
 }
+
+
+.widget-ut{
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.stations {
+    display: flex;
+}

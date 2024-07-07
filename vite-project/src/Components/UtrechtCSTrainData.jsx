@@ -1,19 +1,36 @@
+import { useEffect, useState } from "react";
 import { getNearByStations, getTravelInfo } from "../API-requests/NS-API";
+import StationWidget from "./StationWidget";
 
-const UtrechtCSTrainData = ({className, time, destination, platform, routeVia}) => {
-    const nearByStations = getNearByStations();
-    const travelInfo = getTravelInfo();
 
-    console.log(nearByStations);
+const UtrechtCSTrainData = ({ className, time, destination, platform, routeVia }) => {
+    const [stations, setStations] = useState([]);
 
-    return(
-        <div className={className}>
-            <p className="time">{time}</p>
-            <p className="destination">{destination}</p>
-            <p className="platform">{platform}</p>
-            <p className="routeVia">{routeVia}</p>
+    useEffect(() => {
+        const fetchStations = async () => {
+            try {
+                const nearByStations = await getNearByStations();
+                setStations(nearByStations.payload);
+            } catch (error) {
+                console.error('Error fetching nearby stations:', error);
+            }
+        };
+        fetchStations();
+    }, []);
+    return (
+        <div className="stations">
+            {stations.length > 0 ? (
+                stations.map(station => (
+                    <div className="widget-ut" key={station.UICCode}>
+                        <p>{station.namen.lang}</p>
+                        <StationWidget stationID={station.UICCode} />
+                    </div>
+                ))
+            ) : (
+                <p>No stations available</p>
+            )}
         </div>
-    )
+    );
 }
 
 export default UtrechtCSTrainData;
