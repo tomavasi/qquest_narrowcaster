@@ -1,0 +1,21 @@
+.root {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 0;
+    padding: 1rem;
+    margin: 0 auto 16px;
+}
+
+#qquestLogo {
+    border-radius: 50%;
+    height: 5rem;
+}
+
+.logoContainer {
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

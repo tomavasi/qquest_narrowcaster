@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getTravelInfo } from '../API-requests/NS-API';
+import './NS.css';
 
 export default function StationWidget({ stationID }) {
     const url = `/api/reisinformatie-api/api/v2/departures?uicCode=${stationID}&maxJourneys=10`
@@ -18,7 +19,7 @@ export default function StationWidget({ stationID }) {
                         <p className='destination'>{departure.direction}</p>
 
                         {departure.routeStations.length > 0 ? (
-                            <p className='routeVia'>{departure.routeStations.map(routeStation => routeStation.mediumName).join(', ')}</p>
+                            <p className='routeVia'>Via {departure.routeStations.map(routeStation => routeStation.mediumName).join(', ')}</p>
                         ) : (
                             <p className='routeVia'>No route available</p>
                         )}

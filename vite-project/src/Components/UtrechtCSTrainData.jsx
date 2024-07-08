@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getNearByStations, getTravelInfo } from "../API-requests/NS-API";
 import StationWidget from "./StationWidget";
+import NsLogo from './../assets/Images/NS-Logo.png';
+import './NS.css';
 
 
 const UtrechtCSTrainData = () => {
@@ -22,7 +24,8 @@ const UtrechtCSTrainData = () => {
             {stations.length > 0 ? (
                 stations.map(station => (
                     <div className="widget-ut" key={station.UICCode}>
-                        <p className="stationHeader">{station.namen.lang}</p>
+                        <p className="stationHeader"><img src={NsLogo} className="ns-logo" />{station.namen.lang}</p>
+                        <div className="NSspacing bg-yellow-dark"/>
                         <StationWidget stationID={station.UICCode} />
                     </div>
                 ))

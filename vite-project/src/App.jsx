@@ -3,6 +3,8 @@ import './App.css'
 import './Components/widget.css'
 import WeatherWidget from './Components/WeatherWidget'
 import UtrechtCSTrainData from './Components/UtrechtCSTrainData'
+import Greeting from './Components/Greeting'
+import { Logo } from './Components/Logo'
 import {
   QueryClient,
   QueryClientProvider,
@@ -14,7 +16,9 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
-    <>
+    <div className='root'>
+      <Greeting />
+      <Logo />
       <QueryClientProvider client={queryClient}>
       <WeatherWidget
         className={'widget widget-bg-light'}
@@ -23,7 +27,7 @@ function App() {
         <UtrechtCSTrainData />
       </NS-Widget>
       </QueryClientProvider>
-    </>
+    </div>
   )
 }
 
