@@ -20,20 +20,7 @@ function App() {
         className={'widget widget-bg-light'}
       />
       <NS-Widget>
-        <UtrechtCSTrainData
-          className={'widget utrechtCSTrainDataContainer bg-yellow-light'}
-          time={'07:20'}
-          destination={'Amsterdam'}
-          platform={'3b'}
-          routeVia={'Via Amsterdam-Zuid, Groningen'}
-        />
-        {/* <UtrechtCSTrainData
-          className={'widget utrechtCSTrainDataContainer bg-yellow-dark'}
-          time={'07:20'}
-          destination={'Amsterdam'}
-          platform={'3b'}
-          routeVia={'Via Amsterdam-Zuid, Groningen'}
-        /> */}
+        <UtrechtCSTrainData />
       </NS-Widget>
       </QueryClientProvider>
     </>

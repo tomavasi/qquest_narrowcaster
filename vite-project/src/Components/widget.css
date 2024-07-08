@@ -60,13 +60,14 @@
     font-size: 1.2rem;
 }
 
-
-.widget-ut{
-    position: relative;
-    width: 200px;
-    height: 100px;
-}
-
 .stations {
     display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+}
+
+.stationHeader {
+    padding-left: 2rem;
+    font-size: 1.3rem;
 }

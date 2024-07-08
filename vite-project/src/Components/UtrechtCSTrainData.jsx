@@ -3,7 +3,7 @@ import { getNearByStations, getTravelInfo } from "../API-requests/NS-API";
 import StationWidget from "./StationWidget";
 
 
-const UtrechtCSTrainData = ({ className, time, destination, platform, routeVia }) => {
+const UtrechtCSTrainData = () => {
     const [stations, setStations] = useState([]);
 
     useEffect(() => {
@@ -18,11 +18,11 @@ const UtrechtCSTrainData = ({ className, time, destination, platform, routeVia }
         fetchStations();
     }, []);
     return (
-        <div className="stations">
+        <div className="stations widget bg-yellow-light">
             {stations.length > 0 ? (
                 stations.map(station => (
                     <div className="widget-ut" key={station.UICCode}>
-                        <p>{station.namen.lang}</p>
+                        <p className="stationHeader">{station.namen.lang}</p>
                         <StationWidget stationID={station.UICCode} />
                     </div>
                 ))
