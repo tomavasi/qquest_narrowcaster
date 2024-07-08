@@ -11,3 +11,7 @@
 .widget-bg-light {
     background-color: #F4F9FD;
 }
+
+.weatherWidget {
+    grid-column: 1 / 2;
+}

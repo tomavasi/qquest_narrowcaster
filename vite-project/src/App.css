@@ -6,6 +6,7 @@
     row-gap: 0;
     padding: 1rem;
     margin: 0 auto 16px;
+    color: rgba(20, 32, 56, 1);
 }
 
 #qquestLogo {
@@ -14,7 +15,7 @@
 }
 
 .logoContainer {
-    grid-column: 4 / 5;
+    grid-column: 2 / 3;
     display: flex;
     justify-content: flex-end;
     align-items: center;

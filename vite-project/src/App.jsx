@@ -21,7 +21,7 @@ function App() {
       <Logo />
       <QueryClientProvider client={queryClient}>
       <WeatherWidget
-        className={'widget widget-bg-light'}
+        className={'widget weatherWidget widget-bg-light'}
       />
       <NS-Widget>
         <UtrechtCSTrainData />
