@@ -2,12 +2,12 @@ const Greeting = () => {
     const getGreeting = () => {
         let greeting = (
             getTimeOfDay() == 'morning' ?
-                'Goede morgen!'
+                'Goedemorgen!'
                 :
                 getTimeOfDay() == 'afternoon'
-                    ? 'Goede middag!'
+                    ? 'Goedemiddag!'
                     :
-                    'Goede avond!'
+                    'Goedeavond!'
         )
         return greeting;
     }
@@ -20,7 +20,7 @@ const Greeting = () => {
 
     return (
         <>
-            <h1>{getGreeting()}</h1>
+            <h1 id="greeting">{getGreeting()}</h1>
         </>
     )
 }

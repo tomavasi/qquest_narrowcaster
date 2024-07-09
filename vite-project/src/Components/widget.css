@@ -12,6 +12,19 @@
     background-color: #F4F9FD;
 }
 
-.weatherWidget {
+.weatherMapWidget {
     grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: grid;
+    place-items: center;
+    padding: 0;
+}
+
+.weatherMapWidget iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#weatherMap {
+    aspect-ratio: 3 / 2;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import './Components/widget.css'
-import WeatherWidget from './Components/WeatherWidget'
+import WeatherMapWidget from './Components/WeatherMapWidget'
 import UtrechtCSTrainData from './Components/UtrechtCSTrainData'
 import Greeting from './Components/Greeting'
 import { Logo } from './Components/Logo'
@@ -17,16 +17,18 @@ function App() {
 
   return (
     <div className='root'>
+      <div className="main">
       <Greeting />
       <Logo />
       <QueryClientProvider client={queryClient}>
-      <WeatherWidget
-        className={'widget weatherWidget widget-bg-light'}
+      <WeatherMapWidget
+        className={'widget weatherMapWidget'}
       />
-      <NS-Widget>
+      {/* <NS-Widget> */}
         <UtrechtCSTrainData />
-      </NS-Widget>
+      {/* </NS-Widget> */}
       </QueryClientProvider>
+      </div>
     </div>
   )
 }
