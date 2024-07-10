@@ -1,0 +1,39 @@
+#currentWeatherWidget {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 0.25rem;
+}
+
+/* 
+dayOfWeekCurWeather
+            id="dateCurWeather"
+            id="tempCurWeather
+            <id="iconCurWeather"
+*/
+
+#dayOfWeekCurWeather {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+#dateCurWeather {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+#iconCurWeather {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    transform: translate(1rem, 1rem);
+}
+
+#tempCurWeather {
+    margin-top: 0;
+    display: flex;
+    justify-self: flex-end;
+}

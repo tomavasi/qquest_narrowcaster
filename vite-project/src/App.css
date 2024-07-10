@@ -10,11 +10,11 @@ body {
 
 .main {
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 80px;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto repeat(4, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     box-shadow: 0 3px 6px rgba(20, 32, 56, 0.15);
