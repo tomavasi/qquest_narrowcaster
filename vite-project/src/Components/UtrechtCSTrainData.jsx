@@ -25,7 +25,12 @@ const UtrechtCSTrainData = () => {
                 stations.map(station => (
                     <div className="widget-ut" key={station.UICCode}>
                         <p className="stationHeader"><img src={NsLogo} className="ns-logo" />{station.namen.lang}</p>
-                        <div className="NSspacing bg-yellow-dark"/>
+                        <div className="NSspacing bg-yellow-dark">
+                            <p>Tijd</p>
+                            <p>Bestemming</p>
+                            <p>Trein</p>
+                            <p className="platformHeader">Peron</p>
+                        </div>
                         <StationWidget stationID={station.UICCode} />
                     </div>
                 ))

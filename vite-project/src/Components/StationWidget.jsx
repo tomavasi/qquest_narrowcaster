@@ -21,6 +21,7 @@ export default function StationWidget({ stationID }) {
                             <p className='routeVia'>No route available</p>
                         )}
                         <p className='platform'>{departure.actualTrack}</p>
+                        <p className='train-product'>{departure.product.categoryCode}</p>
                     </div>
                 ))
             ) : (

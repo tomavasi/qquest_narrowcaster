@@ -27,6 +27,7 @@ const WeatherMapWidget = ({className}) => {
     return (
         <div className={className}>
             <iframe
+                id='WeatherMapIframe'
                 ref={weatherMapWidgetRef}
                 src={weatherMapSrc}
                 title="Buienradar"

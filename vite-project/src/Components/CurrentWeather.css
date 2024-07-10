@@ -1,25 +1,20 @@
 #currentWeatherWidget {
     grid-row: 2 / 3;
+    padding: 2rem 4rem 0rem;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
-
-/* 
-dayOfWeekCurWeather
-            id="dateCurWeather"
-            id="tempCurWeather
-            <id="iconCurWeather"
-*/
 
 #dayOfWeekCurWeather {
     display: flex;
     align-items: flex-end;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 #dateCurWeather {
+    font-family: 'Gotham-light';
     display: flex;
     align-items: flex-start;
     margin-top: 0;
@@ -33,6 +28,7 @@ dayOfWeekCurWeather
 }
 
 #tempCurWeather {
+    font-family: 'Gotham-light';
     margin-top: 0;
     display: flex;
     justify-self: flex-end;
