@@ -4,6 +4,5 @@ export const fetchForcastWeatherData = async () => {
         throw new Error('Network response was not ok');
     }
     const ForcastData = await response.json();
-    console.log(ForcastData);
     return ForcastData;
 };
