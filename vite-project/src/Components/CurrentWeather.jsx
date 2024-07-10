@@ -43,13 +43,10 @@ export const CurrentWeather = () => {
         }
     };
 
-    console.log(getBackGroundImg());
-
     const widgetStyle = {
         backgroundImage: getBackGroundImg(),
         backgroundSize: 'cover'
     }
-
 
     return(
         <div id="currentWeatherWidget" className="widget" style={widgetStyle}>

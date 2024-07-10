@@ -10,6 +10,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { CurrentWeather } from './Components/CurrentWeather'
+import { WeatherForcast } from './Components/WeatherForcast'
  
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Greeting />
       <Logo />
       <CurrentWeather />
+      <WeatherForcast />
       <QueryClientProvider client={queryClient}>
       <WeatherMapWidget
         className={'widget weatherMapWidget'}
