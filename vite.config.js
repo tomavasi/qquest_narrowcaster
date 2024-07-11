@@ -6,17 +6,17 @@ export default defineConfig({
   
   server:{
     // setting a redirect proxy to avoid CORS policy block
-    proxy: {
-      '/api': {
-        target: 'https://gateway.apiportal.ns.nl',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, ''), // Removes /api prefix
-        secure: true, 
-        headers:  {
-          'Cache-Control': 'no-cache',
-          'Ocp-Apim-Subscription-Key': `${NS_KEY}`,}
-      },
-    },
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://gateway.apiportal.ns.nl',
+    //     changeOrigin: true,
+    //     rewrite: path => path.replace(/^\/api/, ''), // Removes /api prefix
+    //     secure: true, 
+    //     headers:  {
+    //       'Cache-Control': 'no-cache',
+    //       'Ocp-Apim-Subscription-Key': `${NS_KEY}`,}
+    //   },
+    // },
   },
   plugins: [react()],
   base: '/qquest_narrowcaster/',
