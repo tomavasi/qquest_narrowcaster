@@ -17,20 +17,6 @@ function App() {
   const [count, setCount] = useState(0)
   const queryClient = new QueryClient();
 
-  const PreventScreensaver = () => {
-    useEffect(() => {
-      const interval = setInterval(() => {
-        console.log('Preventing screensaver activation');
-        // Simuleer een muisbeweging
-        window.dispatchEvent(new MouseEvent('mousemove'));
-      }, 1 * 60 * 1000); // Elke 5 minuten
-
-      return () => clearInterval(interval); // Opruimen bij ontkoppelen component
-    }, [])
-  };
-
-  PreventScreensaver();
-
   return (
     <div className='root'>
       <div className="main">
