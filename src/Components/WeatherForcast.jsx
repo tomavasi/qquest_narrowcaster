@@ -33,7 +33,6 @@ export const WeatherForcast = () => {
             }
         }
         getForecastData();
-        console.log('icon = ' + forcastOne.icon)
     }, []);
 
 
