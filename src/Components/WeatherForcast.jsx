@@ -25,7 +25,6 @@ export const WeatherForcast = () => {
         const getForecastData = async () => {
             const forcastData = await fetchForcastWeatherData();
             if(forcastData) {
-                console.log(forcastData.forecast.forecastday[0].day);
                 setForcastOne((prevState) => ({
                     ...prevState,
                     icon: forcastData.forecast.forecastday[0].day.condition[1],

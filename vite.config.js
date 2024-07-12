@@ -19,5 +19,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/qquest_narrowcaster/',
+  base: '/',
 })
