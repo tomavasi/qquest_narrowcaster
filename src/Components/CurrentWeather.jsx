@@ -34,7 +34,7 @@ export const CurrentWeather = () => {
 
         if (condition.includes('sunny') || condition.includes('clear')) {
             return 'url(./../assets/Images/images/sunny.jpg)';
-        } else if (condition.includes('rain')) {
+        } else if (condition.includes('rain') || condition.includes('drizzle')) {
             return 'url(./../assets/Images/images/rainy.jpg)';
         } else if (condition.includes('snow')) {
             return 'url(./../assets/Images/images/snowy.jpg)';

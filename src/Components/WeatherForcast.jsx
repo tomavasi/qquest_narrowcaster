@@ -33,6 +33,7 @@ export const WeatherForcast = () => {
         const getForecastData = async () => {
             const forcastData = await fetchForcastWeatherData();
             if (forcastData) {
+                console.log(forcastData);
                 const indexHourOne = (currentHour + 1);
                 setForcastOne((prevState) => ({
                     ...prevState,
@@ -62,7 +63,7 @@ export const WeatherForcast = () => {
 
 
     return (
-        <div className="widget">
+        <div className="widget widget-bg-light forcastWidget">
             <div className="forcastOne">
                 <p>{forcastOne.hour}</p>
                 <img src={forcastOne.icon}></img>

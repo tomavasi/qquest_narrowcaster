@@ -1,6 +1,6 @@
 .utrechtCSTrainDataContainer {
     grid-template-columns: 15% 1fr 10% 10%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     column-gap: 0.5rem;
     padding: 0.5rem 2rem;
 }

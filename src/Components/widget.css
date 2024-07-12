@@ -37,3 +37,8 @@
 #weatherMap {
     aspect-ratio: 3 / 2;
 }
+
+.forcastWidget {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
