@@ -29,7 +29,7 @@ const UtrechtCSTrainData = () => {
                             <p>Tijd</p>
                             <p>Bestemming</p>
                             <p>Trein</p>
-                            <p className="platformHeader">Peron</p>
+                            <p className="platformHeader">Perron</p>
                         </div>
                         <StationWidget stationID={station.UICCode} />
                     </div>
