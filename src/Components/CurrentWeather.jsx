@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { fetchWeatherData } from "../API-requests/CurrentWeather-API";
 import './CurrentWeather.css'
 
-// font voor datum moet nog worden aan gepast naar een lighter font en de groote van de dag van week moet nog aangepast
-
 export const CurrentWeather = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [currentTemp, setCurrentTemp] = useState('');
@@ -33,13 +31,13 @@ export const CurrentWeather = () => {
         const condition = weatherData.current.condition.text.toLowerCase();
 
         if (condition.includes('sunny') || condition.includes('clear')) {
-            return 'url(./../assets/Images/images/sunny.jpg)';
+            return 'url(./../../public/assets/Images/sunny.jpg)';
         } else if (condition.includes('rain') || condition.includes('drizzle')) {
-            return 'url(./../assets/Images/images/rainy.jpg)';
+            return 'url(./../../public/assets/Images/rainy.jpg)';
         } else if (condition.includes('snow')) {
-            return 'url(./../assets/Images/images/snowy.jpg)';
+            return 'url(./../../public/assets/Images/snowy.jpg)';
         } else {
-            return 'url(./../src/assets/Images/cloudy.jpg)';
+            return 'url(./../../public/assets/Images/cloudy.jpg)';
         }
     };
 
@@ -51,7 +49,7 @@ export const CurrentWeather = () => {
     return(
         <div id="currentWeatherWidget" className="widget" style={widgetStyle}>
             <p id="dayOfWeekCurWeather">{currentDay}</p>
-            <img id="iconCurWeather" src={weatherIcon} />
+            <img id="iconCurWeather" src={weatherIcon} alt="icon of current weather" />
             <p id="dateCurWeather">{currentDate}</p>
             <p id="tempCurWeather">{currentTemp}</p>
         </div>

@@ -5,8 +5,6 @@ import './NS.css';
 export default function StationWidget({ stationID }) {
     const url = `/api/reisinformatie-api/api/v2/departures?uicCode=${stationID}&maxJourneys=11`
     const { data, error, loading } = useQuery({ queryKey: ['departureInfo', stationID], queryFn: async () => await getTravelInfo(url), staleTime: 0, cacheTime: 60 * 1000, refetchInterval: 20 * 1000 },)
-    console.log(data
-    )
 
     return (
         <div>

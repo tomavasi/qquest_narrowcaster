@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import './Components/widget.css'
 import WeatherMapWidget from './Components/WeatherMapWidget'
-import UtrechtCSTrainData from './Components/UtrechtCSTrainData'
+import NSWidget from './Components/NSWidget'
 import Greeting from './Components/Greeting'
 import { Logo } from './Components/Logo'
 import {
@@ -28,9 +28,7 @@ function App() {
           <WeatherMapWidget
             className={'widget weatherMapWidget'}
           />
-          {/* <NS-Widget> */}
-          <UtrechtCSTrainData />
-          {/* </NS-Widget> */}
+          <NSWidget />
         </QueryClientProvider>
       </div>
     </div>

@@ -25,7 +25,6 @@ export async function getTravelInfo (url) {
             'Ocp-Apim-Subscription-Key': `c9af8962e10e46bc92f8e98b501a3894`,},
     },)
     if(response.ok){
-        console.log(response.status)
         return response.json()
     }
     throw new Error('Failed to fetch Travel Info API');

@@ -33,7 +33,6 @@ export const WeatherForcast = () => {
         const getForecastData = async () => {
             const forcastData = await fetchForcastWeatherData();
             if (forcastData) {
-                console.log(forcastData);
                 const indexHourOne = (currentHour + 1);
                 setForcastOne((prevState) => ({
                     ...prevState,

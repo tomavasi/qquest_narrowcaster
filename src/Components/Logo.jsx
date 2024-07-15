@@ -1,4 +1,4 @@
-import logo from './../assets/Images/Qquest-Logo.png'
+import logo from './../../public/assets/Images/Qquest-Logo.png';
 
 export const Logo = () => {
     return (
