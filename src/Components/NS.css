@@ -54,6 +54,7 @@
 }
 
 .stations {
+    max-height: calc(80vh - 1rem);
     display: flex;
     padding: 0;
     grid-column: 3 / 4;

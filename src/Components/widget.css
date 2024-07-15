@@ -1,6 +1,6 @@
 .widget {
     color: var(--Qquest-blue);
-    padding: 32px 32px 0;
+    padding: 32px 32px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: start;
     border: 10px solid #fcfcfc;
@@ -36,16 +36,30 @@
 
 #weatherMap {
     aspect-ratio: 3 / 2;
+    /* height: calc((80vh - 4rem)/2); */
 }
 
 .forcastWidget {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.forcastOne,
+.forcastTwo,
+.forcastThree {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel {
     grid-row: 1 / 4;
     background-color: var(--Qquest-blue);
     color: white;
+    max-height: calc(80vh - 4.75rem);
 }
