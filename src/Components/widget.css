@@ -1,5 +1,5 @@
 .widget {
-    color: rgba(20, 32, 56, 1);
+    color: var(--Qquest-blue);
     padding: 32px 32px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: start;
@@ -16,7 +16,7 @@
 
 .weatherMapWidget {
     grid-column: 1 / 2;
-    grid-row: 4 / 6;
+    grid-row: 3 / 4;
     display: grid;
     place-items: center;
     background: transparent;
@@ -39,6 +39,13 @@
 }
 
 .forcastWidget {
+    grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.carousel {
+    grid-row: 1 / 4;
+    background-color: var(--Qquest-blue);
+    color: white;
 }

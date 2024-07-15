@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import './Components/widget.css'
 import WeatherMapWidget from './Components/WeatherMapWidget'
@@ -11,27 +10,28 @@ import {
 } from '@tanstack/react-query'
 import { CurrentWeather } from './Components/CurrentWeather'
 import { WeatherForcast } from './Components/WeatherForcast'
+import { Carousel } from './Components/Carousel'
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const queryClient = new QueryClient();
 
   return (
-    <div className='root'>
+    <>
+      <Greeting />
+      <Logo />
       <div className="main">
-        <Greeting />
-        <Logo />
         <CurrentWeather />
         <WeatherForcast />
         <QueryClientProvider client={queryClient}>
           <WeatherMapWidget
             className={'widget weatherMapWidget'}
           />
+          <Carousel />
           <NSWidget />
         </QueryClientProvider>
       </div>
-    </div>
+    </>
   )
 }
 

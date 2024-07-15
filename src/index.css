@@ -8,6 +8,19 @@
     src: url('./assets/Font/Gotham-Light.otf');
 }
 
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 #root {
     font-family: 'Gotham';
+    --Qquest-blue: rgba(20, 32, 56, 1);
+    padding: 1.5rem;
+    color: rgba(20, 32, 56, 1);
+    background-color: var(--Qquest-blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    row-gap: 1rem;
 }

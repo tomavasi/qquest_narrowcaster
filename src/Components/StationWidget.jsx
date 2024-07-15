@@ -6,11 +6,14 @@ export default function StationWidget({ stationID }) {
     const url = `/api/reisinformatie-api/api/v2/departures?uicCode=${stationID}&maxJourneys=11`
     const { data, error, loading } = useQuery({ queryKey: ['departureInfo', stationID], queryFn: async () => await getTravelInfo(url), staleTime: 0, cacheTime: 60 * 1000, refetchInterval: 20 * 1000 },)
 
+    let listOfTrains = data ? data.payload.departures.slice() : [];
+    if (listOfTrains.length > 0) listOfTrains.pop();
+
     return (
         <div>
-            {data ? (
-                data.payload.departures.map((departure, index) => (
-                    <div className={`utrechtCSTrainDataContainer ${index % 2 === 0 ? 'bg-yellow-light' : 'bg-yellow-dark'}`} style={index===10 ? {display: 'none'}: {display:"grid"}} key={departure.UICCode}>
+            {listOfTrains ? (
+                listOfTrains.map((departure, index) => (
+                    <div className={`utrechtCSTrainDataContainer ${index % 2 === 0 ? 'bg-yellow-light' : 'bg-yellow-dark'}`} style={index === 10 ? { display: 'none' } : { display: "grid" }} key={departure.UICCode}>
                         <p className='time'>{departure.actualDateTime.split('T')[1].split(':').slice(0, 2).join(':')}</p>
                         <p className='destination'>{departure.direction}</p>
                         {departure.routeStations.length > 0 ? (

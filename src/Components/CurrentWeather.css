@@ -1,5 +1,5 @@
 #currentWeatherWidget {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     padding: 2rem 4rem 0rem;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
