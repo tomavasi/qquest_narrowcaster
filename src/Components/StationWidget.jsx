@@ -3,7 +3,7 @@ import { getTravelInfo } from '../API-requests/NS-API';
 import './NS.css';
 
 export default function StationWidget({ stationID }) {
-    const url = `/api/departures?uicCode=${stationID}&maxJourneys=11`
+    const url = `/api/departures?stationID=${stationID}`
     const { data, error, loading } = useQuery({ queryKey: ['departureInfo', stationID], queryFn: async () => await getTravelInfo(url), staleTime: 0, cacheTime: 60 * 1000, refetchInterval: 20 * 1000 },)
 
     let listOfTrains = data ? data.payload.departures.slice() : [];
