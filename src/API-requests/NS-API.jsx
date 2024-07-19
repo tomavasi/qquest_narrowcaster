@@ -3,11 +3,11 @@ const stationsUrl =  '/api';
 
 export async function getNearByStations () {
     const response = await fetch(`${stationsUrl}`, {
-        // method: 'GET',
-        // // Request headers
-        // headers: {
-        //     'Cache-Control': 'no-cache',
-        //     'Ocp-Apim-Subscription-Key': `${NS_KEY}`,}
+        method: 'GET',
+        // Request headers
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Ocp-Apim-Subscription-Key': `${NS_KEY}`,}
     })
     if(response.ok){
         console.log(response.ok)
