@@ -1,5 +1,5 @@
 const NS_KEY = 'c9af8962e10e46bc92f8e98b501a3894';
-const stationsUrl =  '/api/proxy/nsapp-stations/v2/nearest?lat=52.08253517526941&lng=5.117591126554095&limit=2&includeNonPlannableStations=false';
+const stationsUrl =  '/api/nsapp-stations/v2/nearest?lat=52.08253517526941&lng=5.117591126554095&limit=2&includeNonPlannableStations=false';
 
 export async function getNearByStations () {
     const response = await fetch(`${stationsUrl}`, {
