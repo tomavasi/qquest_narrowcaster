@@ -20,10 +20,10 @@ export async function getTravelInfo (url) {
    
     const response= await fetch(url, {
         method: 'GET',
-        mode: 'no-cors',
         // Request headers
-        headers: {            
-            'Ocp-Apim-Subscription-Key': `c9af8962e10e46bc92f8e98b501a3894`,},
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Ocp-Apim-Subscription-Key': `${NS_KEY}`,}
     },)
     if(response.ok){
         return response.json()
