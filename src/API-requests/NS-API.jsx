@@ -4,6 +4,7 @@ const stationsUrl =  '/api/stations';
 export async function getNearByStations () {
     const response = await fetch(`${stationsUrl}`, {
         method: 'GET',
+        
         // Request headers
         headers: {
             'Cache-Control': 'no-cache',

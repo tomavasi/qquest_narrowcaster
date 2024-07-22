@@ -3,6 +3,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 const NS_KEY = 'c9af8962e10e46bc92f8e98b501a3894';
 
 export default function handler(req, res) {
+  
     // Extract query parameters from the request
     const { stationID } = req.query;
   

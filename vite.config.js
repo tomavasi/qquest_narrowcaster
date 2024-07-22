@@ -8,7 +8,7 @@ export default defineConfig({
     // setting a redirect proxy to avoid CORS policy block
     proxy: {
       '/api': {
-        target: 'https://gateway.apiportal.ns.nl',
+        target: 'https://qquest-narrowcaster.vercel.app/api/',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, ''), // Removes /api prefix
         secure: true, 
